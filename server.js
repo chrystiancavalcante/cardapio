@@ -11,14 +11,14 @@ io.on('connection', (socket)=>{
     socket.on('msg', (msg)=>{
         console.log(msg)
         socket.broadcast.emit('msg', msg);
-        //socket.join('contador')
+        socket.join('contador')
     })
 })
 
-/*let counter = 0
+let counter = 0
 setInterval(()=>{
    io.to('contador').emit('msg', counter++)
-}, 1000)*/
+}, 1000)
 
 
 
